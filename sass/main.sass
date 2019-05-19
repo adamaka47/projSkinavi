@@ -1,0 +1,25 @@
+$blue: blue
+$text: #282828
+$bluelg:  #507fe1
+
+@import 'fonts'
+@import 'settings'
+@import 'header'
+@import 'view'
+
+
+
+*,*::after,*::before
+	box-sizing: border-box
+
+body
+	@include semi()
+	color: $text
+
+button:focus, input:focus
+	outline: none !important
+
+textarea:focus
+	outline: none !important
+
+

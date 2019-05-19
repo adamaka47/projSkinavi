@@ -1,0 +1,146 @@
+.header
+	&_flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+		min-height: 83px
+	&_mob
+		position: fixed
+		top: 83px
+		padding: 16px 0
+		width: 100%
+		background-color: $bluelg
+		z-index: -1
+		transform: translateX(-180%)
+		transition: all 0.5s
+		&_active
+			z-index: 3000
+			transform: translateX(0)
+		ul
+			padding: 0
+			margin: 0
+			list-style-type: none
+			text-align: left
+			display: flex
+			justify-content: space-around
+			align-items: center
+			li
+				display: inline-block
+				a
+					font-size: 17px
+					text-transform: uppercase
+					text-decoration: none
+					color: $text
+					color: #fff
+	&_nav
+		position: fixed
+		left: 0
+		top: 0
+		width: 100%
+		background-color: #fff
+		z-index: 5000
+	&_button
+		border: none
+		background-color: transparent
+		border-right: 1px solid rgba(#510bba, 0.2)
+		border-left: 1px solid rgba(#510bba, 0.2)
+		height: 83px
+		width: 73px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		cursor: pointer
+		&_line
+			width: 23px
+			height: 2px
+			border-radius: 2px
+			background-color: #89a9eb
+			display: block
+			margin-bottom: 5px
+			&:last-child
+				margin-bottom: 0
+	&_logo
+		strong
+			font-size: 18px
+			text-transform: uppercase
+			display: block
+			margin-bottom: 3px
+	&_descr
+		font-size: 14px
+		color: #6b6b6b
+		display: block
+	&_mobile
+		text-align: right
+		a
+			color: #282828
+			font-size: 18px
+			text-transform: uppercase
+			display: block
+			margin-bottom: 3px
+			text-decoration: none
+		&_descr
+			font-size: 14px
+			color: #6b6b6b
+			display: block
+	&_stat
+		text-align: right
+		a:nth-child(2)
+			font-size: 14px
+			color: #6b6b6b
+			display: block
+			text-decoration: none
+		a:nth-child(1)
+			color: #282828
+			font-size: 18px
+			text-transform: uppercase
+			display: block
+			margin-bottom: 3px
+			text-decoration: none
+	&_cons
+		text-transform: uppercase
+		border: none
+		border: 2px solid $bluelg
+		color: $bluelg
+		padding: 17px 22px
+		cursor: pointer
+		font-size: 12px
+		background-color: transparent
+
+@media (max-width: 991.98px)
+	.header
+		&_stat
+			display: none
+	.header
+		&_mob
+			ul
+				justify-content: space-between
+				li
+					a
+						font-size: 14px
+
+@media (max-width: 767.98px)
+	.header
+		&_mobile
+			display: none
+		&_cons
+			padding: 12px
+		&_mob
+			ul
+				flex-direction: column
+				height: 100%
+				li
+					line-height: 3
+
+@media (max-width: 575.98px)
+	.header
+		&_logo
+			display: none
+		.container
+			padding-left: 0
+		&_button
+			border: none
+
+
+
+
