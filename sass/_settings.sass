@@ -4,11 +4,15 @@
 	padding: 0 $padding
 	margin: 0 auto
 
-@mixin button($color: #fff, $bgc: blue)
+@mixin button($color: #fff, $bgc: $bluelg)
 	text-transform: uppercase
 	color: $color
-	background-color: #fff
-	font-size: 14px
+	background-color: $bluelg
+	font-size: 16px
+	cursor: pointer
+	transition: all 0.6s
+	&:hover
+		background: darken($bluelg, 10)
 
 @mixin semi
 	font-family: 'Proxima Nova Semibold', sans-serif
