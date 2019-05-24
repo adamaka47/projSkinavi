@@ -1,0 +1,30 @@
+.features
+	&_items
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		align-items: center
+	&_item
+		flex-basis: 30%
+		text-align: center
+		margin-bottom: 100px	
+		&:nth-child(4)
+			margin-bottom: 0
+		&:nth-child(5)
+			margin-bottom: 0
+		&:nth-child(6)
+			margin-bottom: 0
+	&_img
+		height: 55px
+
+@media (max-width: 991.98px)
+	.features
+		&_item
+			flex-basis: 50%
+			margin-bottom: 40px !important
+
+@media (max-width: 575.98px)
+	.features
+		&_item
+			flex-basis: 100%
+			margin-bottom: 40px

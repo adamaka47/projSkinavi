@@ -1,0 +1,52 @@
+.blog
+	&_title
+		font-size: 24px
+	&_top
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 50px
+	&_link
+		color: $bluelg
+		text-decoration: none
+		font-size: 16px
+	&_items
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&_item
+		box-shadow: 0 2px 9px rgba(0,0,0,0.1)
+		margin-bottom: 20px
+		cursor: pointer
+	&_img
+		height: 200px
+		overflow: hidden
+	&_text
+		text-align: center
+		min-height: 80px
+		line-height: 75px
+
+@media (max-width: 1199.98px)
+	.blog
+		&_items
+			justify-content: space-around
+		&_item
+			flex-basis: 35%
+			img
+				width: 100%
+
+@media (max-width: 767.98px)
+	.blog
+		&_item
+			flex-basis: 60%
+			img
+				width: 100%
+		&_top
+			flex-direction: column
+			text-align: center
+
+@media (max-width: 575.98px)
+	.blog
+		&_item
+			flex-basis: 100%
+

@@ -1,0 +1,116 @@
+.catalog
+	background-color: #f1f1f1
+	&_items
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&_item
+		flex-basis: 50%
+		position: relative
+		max-width: 570px
+		margin-bottom: 30px
+		box-shadow: 7px 5px 21px rgba(0,0,0,0.4)
+	&_type
+		position: absolute
+		top: 8px
+		left: 8px
+		font-size: 12px
+		text-transform: uppercase
+		color: #fff
+		background-color: rgba($bluelg, 0.65)
+		padding: 10px
+	&_button
+		position: absolute
+		bottom: 0px
+		right: 0
+		display: flex
+		&_first
+			background-color: #fff
+			color: $bluelg
+			text-transform: uppercase
+			border: none
+			padding: 10px
+			font-size: 12px
+			cursor: pointer
+			height: 30px
+		&_second
+			@extend .catalog_button_first
+			background-color: lighten($bluelg, 10)
+			color: #fff
+		&_third
+			height: 30px
+			padding: 0
+			border: none
+			width: 30px
+			cursor: pointer
+			background-color: $bluelg
+			img
+				margin: 0 auto
+	&_btn
+		@extend .view_button
+		display: block
+		text-align: center
+		text-decoration: none
+		margin-top: 30px
+		&:hover
+			background: lighten($bluelg, 5)
+	&_text
+		font-size: 14px
+		text-align: center
+		margin-top: 15px
+
+
+	img[alt="Каталог"]
+		display: block
+
+@media (max-width: 1199.98px)
+	.catalog_item
+		max-width: 465px
+
+@media (max-width: 991.98px)
+	.catalog
+		&_item
+			max-width: 340px
+		&_items
+			justify-content: space-around
+		&_button
+			&_first
+				padding: 5px
+				font-size: 10px
+		&_type
+			top: 0
+			left: 0
+			padding: 5px
+			font-size: 10px
+
+@media (max-width: 767.98px)
+	.catalog
+		&_item
+			flex-basis: 100%
+			max-width: 70%
+		&_type
+			font-size: 12px
+			top: 8px
+			left: 8px
+			padding: 10px
+		&_button
+			&_first
+				padding: 10px
+				font-size: 12px
+
+@media (max-width: 575.98px)
+	.catalog
+		&_item
+			max-width: 100%
+		&_type
+			padding: 7px
+			left: 0
+			top: 0
+		&_button
+			&_first
+				padding: 3px
+				font-size: 11px
+
+
+
+			

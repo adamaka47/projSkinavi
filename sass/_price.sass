@@ -1,0 +1,62 @@
+.price
+	background-color: #f1f1f1
+	&_items
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&_item
+		margin-bottom: 20px
+		position: relative
+		background-color: #fff
+		cursor: pointer
+		&:hover
+			.price_btn
+				bottom: -80px
+				z-index: 99
+	&_text
+		padding: 20px
+		font-size: 15px
+	&_type
+		display: flex
+		justify-content: space-between
+		align-items: center
+		&_title
+			margin: 0
+	&_btn
+		position: absolute
+		height: 80px
+		bottom: 0
+		left: 0
+		width: 100%
+		padding: 0px
+		text-align: center
+		z-index: -1
+		background-color: #fff
+		// transition: all 0.5s
+		box-shadow: 0 5px 5px rgba(0,0,0,0.1)
+		button
+			@extend .view_button
+			&:hover
+				background: lighten($bluelg, 10)
+
+@media (max-width: 1199.98px)
+	.price
+		&_items
+			justify-content: space-around
+		&_item
+			margin-left: 20px
+			margin-right: 20px
+
+@media (max-width: 767.98px)
+	.price
+		padding-bottom: 70px
+
+@media (max-width: 680px)
+	.price
+		&_item
+			margin-bottom: 45px
+
+@media (max-width: 575.98px)
+	.price_item
+		margin-left: 0
+		margin-right: 0
