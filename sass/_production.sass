@@ -1,0 +1,27 @@
+.production
+	&_items
+		display: flex
+		justify-content: center
+		align-items: center
+	&_img
+		img
+			max-width: 100%
+	&_info
+		flex-basis: 40%
+		margin-left: 70px
+	&_text
+		font-size: 20px
+
+@media (max-width: 767.98px)
+	.production
+		&_items
+			flex-direction: column
+		&_info
+			margin-left: 0
+			text-align: center
+			max-width: 380px
+			margin-top: 40px
+		&_text
+			font-size: 18px
+			line-height: 1.5
+			padding: 0 20px

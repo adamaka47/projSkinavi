@@ -9,6 +9,9 @@
 	<meta name="author" content="adamaka47">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="css/twentytwenty.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/main.css">
 	<title>Московское Скинави</title>
 </head>
@@ -20,13 +23,13 @@
 			<div class="header_mob">
 				<div class="container">
 					<ul>
-						<li><a href="#" class="menu_mob_link">Главная</a></li>
-						<li><a href="#" class="menu_mob_link">Продукция</a></li>
-						<li><a href="#" class="menu_mob_link">Каталог</a></li>
-						<li><a href="#" class="menu_mob_link">Примеры работ</a></li>
-						<li><a href="#" class="menu_mob_link">Примерка</a></li>
-						<li><a href="#" class="menu_mob_link">Доставка</a></li>
-						<li><a href="#" class="menu_mob_link">О скинали</a></li>
+						<li><a href="#header" class="menu_mob_link">Главная</a></li>
+						<li><a href="#action" class="menu_mob_link">Продукция</a></li>
+						<li><a href="#catalog" class="menu_mob_link">Каталог</a></li>
+						<li><a href="#review" class="menu_mob_link">Примеры работ</a></li>
+						<li><a href="#realize" class="menu_mob_link">Примерка</a></li>
+						<li><a href="#action" class="menu_mob_link">Доставка</a></li>
+						<li><a href="#production" class="menu_mob_link">О скинали</a></li>
 					</ul>
 				</div>
 			</div>
@@ -81,7 +84,12 @@
 									<label for="#" class="action_label">
 										Вид стекла
 									</label>
-									<input type="text" class="action_input">
+									<div class="action_wrap">
+										<select class="action_input">
+											<option value="С печатью">С печатью</option>
+											<option value="Без печати">Без печати</option>
+										</select>
+									</div>
 								</div>
 								<div class="action_item">
 									<label for="#" class="action_label">
@@ -241,7 +249,7 @@
 			</div>
 		</section>
 
-		<section class="section blog">
+		<section class="section blog" id="blog">
 			<div class="container">
 				<div class="blog_top">
 					<h3 class="blog_title">
@@ -278,7 +286,7 @@
 			</div>
 		</section>
 
-		<section class="section price">
+		<section class="section price" id="price">
 			<div class="container">
 				<div class="section_title">Цены и виды скинали</div>
 				<div class="price_items">
@@ -416,15 +424,210 @@
 			</div>
 		</section>
 
+		<section class="section realize" id="realize">
+			<div class="container">
+				<h2 class="section_title">До и после</h2>
+				<div class="realize_wrap">
+					<div class="realize_slider">
+						<div class="realize_item">
+							<div class="realize_item_image">
+								<img src="img/design_before.png" alt="Дизайн до">
+								<img src="img/design_after.png" alt="Дизайн после">
+							</div>
+						</div>
+						<div class="realize_item">
+							<div class="realize_item_image">
+								<img src="img/design_before.png" alt="Дизайн до">
+								<img src="img/design_after.png" alt="Дизайн после">
+							</div>
+						</div>
+						<div class="realize_item">
+							<div class="realize_item_image">
+								<img src="img/design_before.png" alt="Дизайн до">
+								<img src="img/design_after.png" alt="Дизайн после">
+							</div>
+						</div>
+						</div>
+						<div class="realize_slider_arrows">
+							<button class="arrow_prev">
+								<img src="img/arrow_left.png" alt="Переключатель">
+							</button>
+							<button class="arrow_next">
+								<img src="img/arrow_right.png" alt="Переключатель">
+							</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section review" id="review">
+			<div class="container">
+				<h2 class="section_title">Отзывы наших клиентов</h2>
+				<div class="review_slider">
+					<div class="review_slider_item">
+						<p class="review_slider_text">Очень часто мы сталкиваемся с недопониманием со стороны сотрудников, которые "навешают лапши на уши" и пошлют куда подальше...</p>
+						<img src="img/avatar_1.png" alt="Отзыв клиента" class="review_slider_img">
+						<h5 class="review_slider_name">Сергей Иванов<br>Москва</h5>
+					</div>
+					<div class="review_slider_item">
+						<p class="review_slider_text">Очень часто мы сталкиваемся с недопониманием со стороны сотрудников, которые "навешают лапши на уши" и пошлют куда подальше...</p>
+						<img src="img/avatar_2.png" alt="Отзыв клиента" class="review_slider_img">
+						<h5 class="review_slider_name">Сергей Иванов<br>Москва</h5>
+					</div>
+					<div class="review_slider_item">
+						<p class="review_slider_text">Очень часто мы сталкиваемся с недопониманием со стороны сотрудников, которые "навешают лапши на уши" и пошлют куда подальше...</p>
+						<img src="img/avatar_3.png" alt="Отзыв клиента" class="review_slider_img">
+						<h5 class="review_slider_name">Сергей Иванов<br>Москва</h5>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="action bg action_second" id="action">
+			<div class="container">
+				<div class="action_block">
+					<div class="action_item">
+						<h2 class="action_title">
+							Ищите где дешевле и лучше?
+						</h2>
+						<p class="action_text">Если у Вас уже есть расчет от другой фирмы, но Вы хотите цену дешевле, мы вам пересчитаем заказ с максимлаьной скидкой</p>
+						<form method="POST" class="action_form">
+							<div class="action_row">
+								<div class="action_item">
+									<input type="text" class="action_input" placeholder="Ваше имя">
+								</div>
+								<div class="action_item">
+									<input type="tel" class="action_input" placeholder="Ваш телефон">
+								</div>
+								<div class="action_item">
+									<input type="text" class="action_input" placeholder="Ваша цена">
+								</div>
+							</div>
+							<div class="action_row">
+								<div class="action_item">
+									<input type="submit" placeholder="Ваше имя" class="action_input action_button" value="Получить скидку">
+								</div>
+								<div class="action_item">
+									<span class="action_policy">Ваши данные надеждно защищены. <br> Отправление заявки ни к чему не обязывает.</span>
+								</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section production" id="production">
+			<div class="container">
+				<h2 class="section_title">
+					О производстве
+				</h2>
+				<div class="production_items">
+					<div class="production_img">
+						<img src="img/factory.png" alt="Производство">
+					</div>
+					<div class="production_info">
+						<p class="production_text">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni non, quos molestiae doloribus, ab eius?
+						</p>
+						<p class="production_text">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, dicta? Tempora impedit rem expedita minus eos minima aperiam eius odit, aspernatur perferendis eaque unde dignissimos facilis repellendus labore, consequatur commodi.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section contact" id="contact">
+			<div class="container">
+				<h2 class="section_title">Контакты</h2>
+				<div class="contact_items">
+					<div class="contact_item"><img src="img/phone.png" alt="Контакты" class="contact_img"><a href="tel:+79999999999" class="contact_link">+7-(999)-999-99-99</a></div>
+					<div class="contact_item"><img src="img/message.png" alt="Контакты" class="contact_img"><a href="mailto:info@mail.ru" class="contact_link">info@mail.ru</a></div>
+					<div class="contact_item"><img src="img/map.png" alt="Контакты" class="contact_img"><a href="#" class="contact_link">ул. Кутузова, дом 2</a></div>
+				</div>
+			</div>
+		</section>
+
+		<div id="map">
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac16e197944272905505ba7d7b3d9cd44a2f8a960419b0b984cbbfef92f27aca9&amp;width=100%25&amp;height=420&amp;lang=ru_RU&amp;scroll=false"></script>
+		</div>
+
+		<section class="section faq" id="faq">
+			<div class="container">
+				<div class="faq_item">
+					<h3 class="faq_title">
+						Остались вопросы?
+					</h3>
+					<a href="#" class="faq_link">Задайте их менеджеру</a>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer" id="footer">
+			<div class="container">
+				<div class="footer_items">
+					<div class="footer_descr">
+						<h4 class="footer_descr_title">Фабрика Скинали №1</h4>
+						<p class="footer_descr_text">ведущий производитель фабрики</p>
+						<p class="footer_descr_copy">© Фабрика скинали №1</p>
+					</div>
+					<div class="footer_money">
+						<div class="footer_images">
+							<img src="img/visa.png" alt="Платежная система" class="footer_image">
+							<img src="img/webmoney.png" alt="Платежная система" class="footer_image">
+							<img src="img/yandexmoney.png" alt="Платежная система">
+						</div>
+					</div>
+					<div class="footer_contact">
+						<a href="tel:+79999999999" class="footer_phone">+7-(999)-999-99-99</a>
+						<a href="mailto:info@mail.ru" class="footer_mail">info@mail.ru</a>
+						<div class="footer_socials">
+							<a href="#" class="footer_socials_link"><img src="img/vk.png" alt="Вконтакте"></a>
+							<a href="#" class="footer_socials_link"><img src="img/twitter.png" alt="Твиттер"></a>
+							<a href="#" class="footer_socials_link"><img src="img/facebook.png" alt="Фейсбук"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
 	</main>
 
 
 
 	<script type="text/javascript" src="https://spikmi.com/Widget?Id=987"></script>
 	<script
-	  src="https://code.jquery.com/jquery-3.4.1.min.js"
-	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  src="https://code.jquery.com/jquery-2.2.4.min.js"
+	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 	  crossorigin="anonymous"></script>
+	  <script src="js/jquery.event.move.js"></script>
+	  <script src="js/jquery.twentytwenty.js"></script>
+	  <script src="js/slick.min.js"></script>
+	  <script src="js/jquery.maskedinput.min.js"></script>
 	  <script src="js/script.js"></script>
+	  <script>
+	  	$(window).load(function() {
+	  		$('.realize_item_image').twentytwenty({
+	  			before_label: 'Без скинали',
+	  			after_label: 'Со скинали'
+	  		});
+	  		$('.realize_slider').slick({
+	  			draggable: false,
+	  			dots: true,
+	  			prevArrow: $('.arrow_prev'),
+	  			nextArrow: $('.arrow_next')
+	  		});
+	  		$('input[type="tel"]').mask("+7 (999) 999-99-99");
+	  		var navLink = $('.header_nav ul li a');
+	  		navLink.on('click', function(event) {
+	  			event.preventDefault();
+	  			var helps = $(this).attr('href');
+	  			var top = $(helps).offset().top;
+	  			$('html, body').animate({scrollTop: top - 105}, 1500)
+	  		});
+	  	});
+	  </script>
 </body>
 </html>

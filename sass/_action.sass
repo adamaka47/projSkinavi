@@ -1,4 +1,16 @@
 .action
+	&_second
+		.action_block
+			background: #fff url('../img/form_bg_2.png') top right no-repeat
+			background-size: contain
+		.action_row:last-child
+			margin-top: 45px
+		.action_text
+			max-width: 800px
+		.action_policy
+			margin-left: 30px
+			display: inline-block
+			width: 100%
 	&_block
 		background-color: #fff
 		padding: 80px
@@ -30,6 +42,7 @@
 		&:nth-child(3)
 			.action_input
 				border-right: 1px solid #ddd
+
 	&_input
 		width: 100%
 		height: 80px
@@ -59,14 +72,45 @@
 				height: 32px
 				border: 1px solid #ddd
 				margin-right: 20px
+	select
+		-moz-appearance: none
+		-webkit-appearance: none
+		appearance: none
+		z-index: 9
+		cursor: pointer
+	&_wrap
+		position: relative
+		overflow: hidden
+		&:hover
+			&::after
+				right: -100px
+		&::after
+			content: ''
+			position: absolute
+			cursor: pointer
+			top: 50%
+			transform: translateY(-50%)
+			right: 20px
+			background: url('../img/arrow_down.png')
+			width: 20px
+			height: 10px
+			display: block
+			transition: all 5s
 
 @media (max-width: 1199.98px)
 	.action
+		&_second
+			.action_block
+				background-position: center right -150px
+
 		&_block
 			background-position: center right -150px
 		
 @media (max-width: 991.98px)
 	.action
+		&_second
+			.action_block
+				background-position: center right -200px
 		.container
 			padding: 20px 0
 		&_block
@@ -75,6 +119,18 @@
 
 @media (max-width: 767.98px)
 	.action
+		&_second
+			.action_block
+				background-position: center right -600px
+			.action_policy
+				margin-left: 0
+			.action_button
+				max-width: 100%
+			.action_row:last-child
+				justify-content: space-between
+				flex-direction: column
+				text-align: center
+				margin-top: 0
 		&_row
 			flex-direction: column
 			&:nth-child(2)
@@ -84,6 +140,10 @@
 		&_input
 			border-right: 1px solid #ddd
 			margin-bottom: 30px
+		&_wrap
+			&::after
+				top: 32%
+				transform: translateY(0%)
 
 @media (max-width: 575.98px)
 	.action

@@ -1,0 +1,51 @@
+.footer
+	padding: 40px 0
+	background-color: #242424
+	color: #fff
+	a
+		color: #fff
+		text-decoration: none
+	&_descr
+		&_title
+			text-transform: uppercase
+			margin: 0
+			margin-bottom: 5px
+			font-size: 18px
+		&_text
+			display: block
+			margin: 0
+			margin-bottom: 45px
+		&_copy
+			color: #777
+	&_items
+		display: flex
+		justify-content: space-between
+	&_money
+		img
+			margin: 15px
+			cursor: pointer
+	&_contact
+		text-align: right
+	&_phone
+		display: block
+		margin-bottom: 20px
+		font-size: 20px
+	&_mail
+		margin-bottom: 23px
+		display: block
+	&_socials
+		&_link
+			margin-right: 15px
+			&:nth-child(3)
+				margin-right: 0
+
+@media (max-width: 767.98px)
+	.footer
+		text-align: center
+		&_items
+			flex-direction: column
+		&_contact
+			text-align: center
+			margin-top: 35px
+		&_money
+			margin-top: 35px

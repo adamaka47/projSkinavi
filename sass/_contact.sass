@@ -1,0 +1,24 @@
+.contact
+	background-color: #f1f1f1
+	&_items
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
+	&_item
+		text-align: center
+	&_link
+		text-decoration: none
+		color: $text
+	&_img
+		display: block
+		margin: auto
+		margin-bottom: 25px
+		height: 30px
+
+@media (max-width: 767.98px)
+	.contact
+		&_item
+			flex-basis: 100%
+			margin-bottom: 40px
+			&:last-child
+				margin-bottom: 0

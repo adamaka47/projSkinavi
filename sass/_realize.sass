@@ -1,0 +1,53 @@
+.realize
+	.slick-dots li
+		height: 10px
+		width: 10px
+		margin-right: 10px
+		&:last-child
+			margin-right: 0
+	.slick-dots li button
+		padding: 0
+		border-radius: 50%
+		width: 10px
+		height: 10px
+	.slick-dots li button:before
+		content: ''
+		width: 10px
+		height: 10px
+		border-radius: 50%
+		background: $bluelg
+		top: 10px
+	&_wrap
+		position: relative
+		max-width: 640px
+		margin: auto
+		z-index: 2
+
+	&_slider
+		&_arrows
+			z-index: -1
+			width: 100%
+			position: absolute
+			display: flex
+			justify-content: space-between
+			top: 50%
+			transform: translateY(-50%)
+			.arrow
+				&_prev
+					transform: translateX(-140%)
+					background-color: transparent
+					border: none
+					cursor: pointer
+				&_next
+					@extend .arrow_prev
+					transform: translateX(140%)
+
+@media (max-width: 767.98px)
+	.realize
+		&_slider_arrows
+			display: none
+
+@media (max-width: 575.98px)
+	.realize
+		.slick-dots li button:before
+			top: 0px
