@@ -7,7 +7,8 @@
 	<meta name="keywords" content="Фабрика Скинали">
 	<meta name="description" content="Фабрика Скинали является одной из крупнейших компаний мира">
 	<meta name="author" content="adamaka47">
-	
+	<link rel="icon" href="img/favicon.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<link rel="stylesheet" href="css/twentytwenty.css">
 	<link rel="stylesheet" href="css/slick-theme.css">
@@ -17,6 +18,21 @@
 </head>
 <body>
 	
+
+	<div class="overlay">
+		<div class="modal_dialog">
+			<div class="modal_info">
+				<h3 class="modal_title">Бесплатная консультация!</h3>
+				<input type="text" placeholder="Введите имя">
+				<input type="tel" placeholder="Введите телефон">
+				<button type="submit">Отправить заявку</button>
+			</div>
+			<button class="modal_close">
+				&times;
+			</button>
+		</div>
+	</div>
+
 
 	<header class="header" id="header">
 		<nav class="header_nav">
@@ -626,6 +642,12 @@
 	  			var helps = $(this).attr('href');
 	  			var top = $(helps).offset().top;
 	  			$('html, body').animate({scrollTop: top - 105}, 1500)
+	  		});
+	  		$('.header_cons').click(function() {
+	  			$('.overlay').fadeIn(500);
+	  		});
+	  		$('.modal_close').click(function() {
+	  			$('.overlay').fadeOut(500);
 	  		});
 	  	});
 	  </script>
