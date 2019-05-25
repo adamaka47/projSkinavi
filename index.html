@@ -116,64 +116,60 @@
 		<section class="action bg" id="action">
 			<div class="container">
 				<div class="action_block">
-					<div class="action_item">
-						<h2 class="action_title">
-							Оставьте заявку на расчет
-						</h2>
-						<p class="action_text">и получите скидку 30% на изготовление скинали или фартука для кухни</p>
-						<form method="POST" class="action_form">
-							<div class="action_row">
-								<div class="action_item">
-									<label for="#" class="action_label">
-										Вид стекла
-									</label>
-									<div class="action_wrap">
-										<select class="action_input">
-											<option value="С печатью">С печатью</option>
-											<option value="Без печати">Без печати</option>
-										</select>
-									</div>
-								</div>
-								<div class="action_item">
-									<label for="#" class="action_label">
-										Ширина, см
-									</label>
-									<input type="text" class="action_input">
-								</div>
-								<div class="action_item">
-									<label for="#" class="action_label">
-										Высота, см
-									</label>
-									<input type="text" class="action_input">
-								</div>
-					
-							</div>
-							<div class="action_row action_checks">
-								<div class="action_checks">
-									<input type="radio" name="radios" id="montage" class="action_checkbox" checked>
-									<label for="montage" class="action_checkbox_label">
-									Монтаж</label>
-								</div>
-								<div class="action_checks">
-									<input type="radio" name="radios" id="deliv" class="action_checkbox">
-									<label for="deliv" class="action_checkbox_label">
-									Доставка</label>
+					<h2 class="action_title">
+						Оставьте заявку на расчет
+					</h2>
+					<p class="action_text">и получите скидку 30% на изготовление скинали или фартука для кухни</p>
+					<form method="POST" class="action_form" action="style.php">
+						<div class="action_row">
+							<div class="action_item">
+								<label class="action_label">
+									Вид стекла
+								</label>
+								<div class="action_wrap">
+									<select class="action_input">
+										<option value="С печатью">С печатью</option>
+										<option value="Без печати">Без печати</option>
+									</select>
 								</div>
 							</div>
-							<div class="action_row">
+							<div class="action_item">
+								<label class="action_label">
+									Ширина, см
+								</label>
+								<input type="text" class="action_input">
+							</div>
+							<div class="action_item">
+								<label class="action_label">
+									Высота, см
+								</label>
+								<input type="text" class="action_input">
+							</div>
+						</div>
+						<div class="action_row action_checks">
+							<div class="action_checks">
+								<input type="radio" name="radios" id="montage" class="action_checkbox" checked>
+								<label for="montage" class="action_checkbox_label">
+								Монтаж</label>
+							</div>
+							<div class="action_checks">
+								<input type="radio" name="radios" id="deliv" class="action_checkbox">
+								<label for="deliv" class="action_checkbox_label">
+								Доставка</label>
+							</div>
+						</div>
+						<div class="action_row">
+							<div class="action_item">
+								<input type="text" placeholder="Ваше имя" class="action_input">
+							</div>
 								<div class="action_item">
-									<input type="text" placeholder="Ваше имя" class="action_input">
+									<input type="tel" placeholder="Ваш телефон" class="action_input">
 								</div>
-									<div class="action_item">
-										<input type="tel" placeholder="Ваш телефон" class="action_input">
-									</div>
-									<div class="action_item">
-										<input type="submit" placeholder="Ваше имя" class="action_input action_button">
-									</div>
+								<div class="action_item">
+									<input type="submit" class="action_input action_button">
 								</div>
 							</div>
-						</form>
-					</div>
+					</form>
 				</div>
 			</div>
 		</section>
@@ -526,7 +522,7 @@
 			</div>
 		</section>
 
-		<section class="action bg action_second" id="action">
+		<section class="action bg action_second">
 			<div class="container">
 				<div class="action_block">
 					<div class="action_item">
@@ -534,7 +530,7 @@
 							Ищите где дешевле и лучше?
 						</h2>
 						<p class="action_text">Если у Вас уже есть расчет от другой фирмы, но Вы хотите цену дешевле, мы вам пересчитаем заказ с максимлаьной скидкой</p>
-						<form method="POST" class="action_form">
+						<form method="POST" class="action_form" action="style.php">
 							<div class="action_row">
 								<div class="action_item">
 									<input type="text" class="action_input" placeholder="Ваше имя">
@@ -548,11 +544,10 @@
 							</div>
 							<div class="action_row">
 								<div class="action_item">
-									<input type="submit" placeholder="Ваше имя" class="action_input action_button" value="Получить скидку">
+									<input type="submit" class="action_input action_button" value="Получить скидку">
 								</div>
 								<div class="action_item">
 									<span class="action_policy">Ваши данные надеждно защищены. <br> Отправление заявки ни к чему не обязывает.</span>
-								</div>
 								</div>
 							</div>
 						</form>
