@@ -589,7 +589,7 @@
 		</section>
 
 		<div id="map">
-			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac16e197944272905505ba7d7b3d9cd44a2f8a960419b0b984cbbfef92f27aca9&amp;width=100%25&amp;height=420&amp;lang=ru_RU&amp;scroll=false"></script>
+			
 		</div>
 
 		<section class="section faq" id="faq">
@@ -648,6 +648,7 @@
 	  <script src="js/script.js"></script>
 	  <script>
 	  	$(document).ready(function() {
+	  		$('.preloader').delay(2500).fadeOut(200);
 	  		$('.realize_item_image').twentytwenty({
 	  			before_label: 'Без скинали',
 	  			after_label: 'Со скинали'
@@ -672,7 +673,18 @@
 	  		$('.modal_close').click(function() {
 	  			$('.overlay').fadeOut(500);
 	  		});
-	  		$('.preloader').delay(2500).fadeOut(200);
+	  		
+
+	  		var review = $('.review');
+	  		var review_top = review.offset().top;
+	  		$(window).bind('scroll', function() {
+	  			var windowTop = $(this).scrollTop();
+	  			if (windowTop > review_top) {
+	  				// console.log('Заскроллил');
+	  				$('#map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac16e197944272905505ba7d7b3d9cd44a2f8a960419b0b984cbbfef92f27aca9&amp;width=100%25&amp;height=420&amp;lang=ru_RU&amp;scroll=false"> < /script>');
+	  				$(window).unbind('scroll');
+	  			}
+	  		})
 	  	});
 	  </script>
 </body>
